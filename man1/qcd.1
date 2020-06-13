@@ -1,0 +1,61 @@
+.\" Copyright (C) 2020 Kevin Boone 
+.\" Permission is granted to any individual or institution to use, copy, or
+.\" redistribute this software so long as all of the original files are
+.\" included, that it is not sold for profit, and that this copyright notice
+.\" is retained.
+.\"
+.TH qcd 1 "June 2020"
+.SH NAME
+qcd \-\- a quick-select extension for the bash \fIcd\fR command. 
+
+.SH SYNOPSIS
+.B cd\ [\-\-add] [\-\-delete] [\-\-list] {directory}
+.PP
+
+.SH DESCRIPTION
+\fIqcd\fR extends the capabilities of the bash shell.
+It
+maintains a list of previously-used directories; directories can then
+be selected from this list by entering a partial name. If there are 
+multiple matches, the utility displays a selection list.
+
+.SH ACTIVATION
+
+To activate the \fIqcd\fR extension, run
+
+\fI. qcd_init.sh\fR
+
+in a bash session. This command can be added to \fI.bashrc\fR to enable
+the extension permanently.
+
+After activation, \fIqcd\fR is simply invoked as \fIcd\fR.
+
+.SH "OPTIONS"
+
+.TP
+.BI -a,\-\-add
+.LP
+Add the current working directory to the stored list
+
+.TP
+.BI -d,\-\-del
+.LP
+Delete the current working directory from the stored list
+
+.TP
+.BI -l,\-\-list
+.LP
+Select a directory from a list of previously-seen directories
+
+.TP
+.BI \-\-purge
+.LP
+Delete all stored directories
+
+
+.SH "AUTHOR"
+
+\fIqcd\fR is maintained by Kevin Boone. For more information see
+https://github.com/kevinboone/qcd.
+
+.\" end of file

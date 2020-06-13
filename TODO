@@ -1,0 +1,4 @@
+After pressing DEL in the selection list, refresh the selection list and 
+allow the user to continue. Currently we just close the list.
+
+
